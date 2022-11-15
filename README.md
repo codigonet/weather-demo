@@ -11,6 +11,11 @@ utilizando la API de <a href="https://openweathermap.org/current">OpenWeatherMAP
 
 ### Para probar el ejemplo
 
+- Instalar las librerías que usa el ejemplo, mediante el comando pip
+```bash
+pip install -r requirements.txt
+```
+
 - Ejecutar con Python3 el archivo clima.py
 ```bash
 python clima.py
