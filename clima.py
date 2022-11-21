@@ -17,6 +17,7 @@ lista_comunas = [
   "HUECHURABA"
 ]
 clima = []
+pronosticos = []
 
 for ubicacion in lista_comunas:
   # Acá se ajusta el nombre de la comuna para hacerla compatible a consulta a la API.
@@ -27,8 +28,11 @@ for ubicacion in lista_comunas:
   datos = requests.get(URL)
   datos_json = datos.json()
   temperatura = datos_json["main"]["temp"]
+  pronostico = datos_json["weather"][0]["description"]
   clima.append(temperatura)
+  pronosticos.append(pronostico)
 
 print("Comunas: ",lista_comunas)
-print("Clima: ", clima)
+print("Climas: ", clima)
+print("Pronósticos: ", pronosticos)
 
